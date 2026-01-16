@@ -1,0 +1,10 @@
+{
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "my-database",
+      "migrations_dir": "drizzle",
+      "database_id": "YOUR_DATABASE_ID"
+    }
+  ]
+}

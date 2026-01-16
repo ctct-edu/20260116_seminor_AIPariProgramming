@@ -1,0 +1,11 @@
+{
+  // このファイル自体では直接コンパイルするファイルは指定しない
+  "files": [],
+  // プロジェクトリファレンスの設定
+  "references": [
+    // アプリケーション本体の TypeScript 設定への参照
+    { "path": "./tsconfig.app.json" },
+    // Node.js 環境用の TypeScript 設定への参照
+    { "path": "./tsconfig.node.json" }
+  ]
+}

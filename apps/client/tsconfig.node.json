@@ -1,0 +1,22 @@
+{
+  // 基本設定を ../../tsconfig.base.json から継承
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    // ビルド情報を保存するファイルのパスを指定
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    // ECMAScript 2023 をターゲットとして設定
+    "target": "ES2023",
+    // ES2023 の機能を利用可能に設定
+    "lib": ["ES2023"],
+
+    /**
+     * Bundler mode
+     */
+    // すべてのファイルをモジュールとして扱うように強制
+    "moduleDetection": "force",
+    // JavaScript ファイルの出力を無効化 （バンドラーが処理するため）
+    "noEmit": true
+  },
+  // Vite 設定ファイルのみをコンパイル対象として指定
+  "include": ["vite.config.ts"]
+}

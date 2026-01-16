@@ -1,0 +1,28 @@
+{
+  "name": "@xenoculis-monorepo/db",
+  "scripts": {
+    "dev": "bun studio",
+    "generate": "drizzle-kit generate",
+    "migrate": "wrangler d1 migrations apply my-database --local --persist-to ../../apps/server/.wrangler/state",
+    "migrate:remote": "wrangler d1 migrations apply my-database --remote",
+    "studio": "drizzle-kit studio --config drizzle.config.local.ts",
+    "visual": "bunx drizzle-lab@latest visualizer",
+    "create-d1": "wrangler d1 create my-database",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "peerDependencies": {
+    "drizzle-orm": "^0.45.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260116.0",
+    "@vitest/coverage-v8": "^4.0.17",
+    "drizzle-kit": "^0.31.8",
+    "drizzle-orm": "^0.45.1",
+    "typescript": "5.9.3",
+    "vitest": "^4.0.17",
+    "wrangler": "^4.59.2"
+  },
+  "dependencies": {
+    "zod": "^4.3.5"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@xenoculis-monorepo/db": ["packages/db/index.ts"],
+      "@xenoculis-monorepo/db/*": ["packages/db/*"],
+      "@xenoculis-monorepo/db/schemas": ["packages/db/schemas/index.ts"],
+      "@xenoculis-monorepo/db/schemas/*": ["packages/db/schemas/*"],
+      "@xenoculis-monorepo/server": ["apps/server/src/index.tsx"]
+    },
+    "target": "ES2023",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "isolatedModules": true
+  },
+  "exclude": [
+    "**/node_modules",
+    "**/.tanstack",
+    "**/.wrangler",
+    "**/dist",
+    "**/build",
+    "**/drizzle/**/*"
+  ]
+}

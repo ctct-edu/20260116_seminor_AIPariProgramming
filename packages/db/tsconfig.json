@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    // プロジェクトリファレンスを有効化 (これにより、他のプロジェクトからこのパッケージを参照できる)
+    "composite": true,
+    // 型定義ファイル （.d.ts） を生成 (他のパッケージがスキーマの型情報を利用できるようにする)
+    "declaration": true,
+    // コンパイル結果の出力先ディレクトリ (dist フォルダに型定義ファイルを出力)
+    "outDir": "./dist",
+    // パッケージのルートをソースルートとする （schemas, constants, index.ts が直下にあるため）
+    "rootDir": "./"
+  },
+  "include": [
+    "schemas/**/*.ts",
+    "constants/**/*.ts",
+    "index.ts",
+    "drizzle.config.ts",
+    "drizzle.config.local.ts"
+  ],
+}
